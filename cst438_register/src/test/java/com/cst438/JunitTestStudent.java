@@ -75,7 +75,7 @@ class JunitTestStudent {
 		Student student = new Student();
 		student.setName(TEST_STUDENT_NAME);
 		student.setEmail(TEST_STUDENT_EMAIL);
-		student.setStudent_id(TEST_STUDENT_ID);
+		//student.setStudent_id(TEST_STUDENT_ID);
 		
 		
 		//we are checking if they already exist so it should return the student

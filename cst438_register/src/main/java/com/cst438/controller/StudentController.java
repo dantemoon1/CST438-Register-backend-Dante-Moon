@@ -4,6 +4,8 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,6 +27,7 @@ public class StudentController {
 		return "hello this is where you should put a new studnet";
 	}
 	
+	@CrossOrigin
 	@PostMapping("/student") //takes in an email and name as params
 	public Student addStudent(@RequestParam("email")String email, @RequestParam("name") String name) {
 		Student s = studentRepository.findByEmail(email);
