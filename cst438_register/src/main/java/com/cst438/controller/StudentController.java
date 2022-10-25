@@ -22,11 +22,6 @@ public class StudentController {
 	@Autowired
 	StudentRepository studentRepository;
 	
-	@GetMapping("/student/new")
-	public String newStudent() { //was just testing this
-		return "hello this is where you should put a new studnet";
-	}
-	
 	@CrossOrigin
 	@PostMapping("/student") //takes in an email and name as params
 	public Student addStudent(@RequestParam("email")String email, @RequestParam("name") String name) {
